@@ -31,7 +31,9 @@ export const fetchThunkCurr = () => async (dispatch) => {
   dispatch(getCur());
   try {
     const payload = await currenciesAPI();
-    dispatch(sucessCurGet(payload));
+    delete payload.USDT;
+    const moedas = Object.entries(payload).map((element) => element[1].code);
+    dispatch(sucessCurGet(moedas));
   } catch (err) {
     dispatch(failCur(err));
   }
