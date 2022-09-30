@@ -6,6 +6,7 @@ import { fetchThunkCurr, thunkExpense } from '../redux/actions';
 class WalletForm extends Component {
   state = {
     expense: 0,
+    value: '',
     description: '',
     currency: 'USD',
     method: 'Dinheiro',
@@ -25,15 +26,21 @@ class WalletForm extends Component {
   onHandleClick = () => {
     const { dispatch } = this.props;
     dispatch(thunkExpense(this.state));
+    this.setState({
+      value: '',
+      description: '',
+    });
   };
 
   render() {
     const { data } = this.props;
+    const { value, description } = this.state;
     return (
       <div>
         <label htmlFor="value-input">
           Valor da despesa
           <input
+            value={ value }
             onChange={ this.onHandleChange }
             name="value"
             data-testid="value-input"
@@ -44,6 +51,7 @@ class WalletForm extends Component {
         <label htmlFor="description-input">
           Descrição
           <input
+            value={ description }
             onChange={ this.onHandleChange }
             name="description"
             data-testid="description-input"
