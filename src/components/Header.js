@@ -9,18 +9,13 @@ class Header extends Component {
     totalDespesa.forEach((element) => {
       const { currency, value } = element;
       const cotacao = element.exchangeRates[currency].ask;
-      console.log(cotacao);
-      // console.log((Number(value) * Number(cotacao)));
-      // this.setState({ total: Number(value) * Number(cotacao) });
       acc += (Number(value) * Number(cotacao));
-      // console.log(acc);
     });
     return acc;
   };
 
   render() {
     const { email } = this.props;
-    // console.log(typeof totalDespesa[0].exchangeRates.USD.ask);
     return (
       <div>
         <h1 data-testid="email-field">{ email }</h1>
