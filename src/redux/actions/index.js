@@ -62,9 +62,15 @@ const expenseFail = (err) => ({
 export const thunkExpense = (info) => async (dispatch) => {
   try {
     const data = await currenciesAPI();
-    console.log(data);
     dispatch(getExpense(data, info));
   } catch (err) {
     dispatch(expenseFail(err));
   }
 };
+
+// --------------------------------- Requisito 7 ----------------------------------------- //
+export const REMOVE_EXPENSE = 'REMOVE_EXPENSE';
+export const removeExpense = (payload) => ({
+  type: REMOVE_EXPENSE,
+  payload,
+});
