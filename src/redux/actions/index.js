@@ -74,3 +74,10 @@ export const removeExpense = (payload) => ({
   type: REMOVE_EXPENSE,
   payload,
 });
+
+// --------------------------------- Requisito 9 ----------------------------------------- //
+export const EDIT_EXPENSE = 'EDIT_EXPENSE';
+export const editExpense = (payload) => ({
+  type: EDIT_EXPENSE,
+  payload,
+});

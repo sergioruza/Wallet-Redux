@@ -60,6 +60,15 @@ class Table extends Component {
 
                     </button>
                   </td>
+                  <td>
+                    <button
+                      data-testid="edit-btn"
+                      type="button"
+                    >
+                      Editar
+
+                    </button>
+                  </td>
                 </tr>
               );
             })
