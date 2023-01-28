@@ -37,7 +37,7 @@ O sistema é composto de uma interface web. Linguagem, frameworks e bibliotecas 
 * **F1** - JavaScript.
 * **F2** - ReactJs.
 * **F3** - Redux.
-* **F3** - Componentes de classe.
+* **F4** - Componentes de classe.
 ### Requisitos Funcionais
 Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 
